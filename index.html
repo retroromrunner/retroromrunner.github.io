@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>retroromrunner — playable web games</title>
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body {
+    background: #07070f;
+    color: #d7d7e8;
+    font-family: "Courier New", Courier, monospace;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 32px 16px 48px;
+    background-image:
+      repeating-linear-gradient(0deg, rgba(255,255,255,0.018) 0 1px, transparent 1px 3px);
+  }
+  header { text-align: center; margin-bottom: 36px; }
+  header h1 {
+    color: #39ff6a;
+    font-size: clamp(28px, 6vw, 52px);
+    letter-spacing: 6px;
+    text-shadow: 0 0 18px rgba(57,255,106,.55);
+  }
+  header p {
+    color: #8b8ba3;
+    margin-top: 10px;
+    letter-spacing: 3px;
+    font-size: 13px;
+  }
+  .games {
+    display: flex;
+    gap: 24px;
+    flex-wrap: wrap;
+    justify-content: center;
+    max-width: 900px;
+    width: 100%;
+  }
+  .card {
+    flex: 1 1 320px;
+    max-width: 420px;
+    background: #0d0d1a;
+    border: 2px solid #23233a;
+    border-radius: 10px;
+    padding: 26px 24px;
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+    transition: transform .15s ease, box-shadow .15s ease;
+  }
+  .card:hover { transform: translateY(-4px); }
+  .card.dc { border-color: #0e5a66; }
+  .card.dc:hover { box-shadow: 0 0 28px rgba(0,229,255,.25); }
+  .card.cryn { border-color: #5a3a86; }
+  .card.cryn:hover { box-shadow: 0 0 28px rgba(160,92,230,.28); }
+  .tag {
+    display: inline-block;
+    font-size: 11px;
+    letter-spacing: 2px;
+    padding: 4px 10px;
+    border-radius: 20px;
+    width: fit-content;
+  }
+  .dc .tag { color: #00e5ff; border: 1px solid #0e5a66; }
+  .cryn .tag { color: #c9a0ff; border: 1px solid #5a3a86; }
+  .card h2 {
+    font-size: 26px;
+    letter-spacing: 3px;
+  }
+  .dc h2 { color: #00e5ff; text-shadow: 0 0 12px rgba(0,229,255,.5); }
+  .cryn h2 { color: #c9a0ff; text-shadow: 0 0 12px rgba(160,92,230,.5); }
+  .card p { font-size: 14px; line-height: 1.65; color: #b9b9d0; }
+  .card .controls { font-size: 12px; color: #8b8ba3; }
+  .play {
+    margin-top: auto;
+    display: block;
+    text-align: center;
+    text-decoration: none;
+    font-weight: bold;
+    letter-spacing: 4px;
+    font-size: 16px;
+    padding: 14px;
+    border-radius: 6px;
+    transition: filter .15s ease;
+  }
+  .play:hover { filter: brightness(1.2); }
+  .dc .play { background: #00e5ff; color: #04141a; }
+  .cryn .play { background: #a05ce6; color: #140a24; }
+  .src { margin-top: 10px; font-size: 12px; text-align: center; }
+  .src a { color: #8b8ba3; text-decoration: none; }
+  .src a:hover { color: #d7d7e8; text-decoration: underline; }
+  footer {
+    margin-top: 48px;
+    color: #55556e;
+    font-size: 12px;
+    letter-spacing: 2px;
+    text-align: center;
+  }
+</style>
+</head>
+<body>
+  <header>
+    <h1>RETROROMRUNNER</h1>
+    <p>PLAYABLE WEB GAMES &mdash; NO INSTALLS, JUST PLAY</p>
+  </header>
+
+  <main class="games">
+    <section class="card dc">
+      <span class="tag">RAYCASTER DUNGEON CRAWLER</span>
+      <h2>DEEP CIRCUIT</h2>
+      <p>You are RETROROM, diving procedurally generated mainframe sectors in an endless descent. Each sector's uplink is firewalled until you collect <b>3 ACCESS SHARDS</b>. Salvage RAM, GPUs and SSDs as upgrades. Fight viruses, worms, trojans and daemons. How deep can you go?</p>
+      <p class="controls">W/S move &middot; A/D turn &middot; touch on mobile</p>
+      <a class="play" href="https://retroromrunner.github.io/deep-circuit/">PLAY NOW</a>
+      <p class="src"><a href="https://github.com/retroromrunner/deep-circuit">source code</a></p>
+    </section>
+
+    <section class="card cryn">
+      <span class="tag">16-BIT FANTASY RPG</span>
+      <h2>CRYN: THE DARK REFLECTION</h2>
+      <p>A complete 16-bit-style web RPG. The king is dying and Beorne's betrayal has unleashed darkness. Cross the forest, face the King Tree Ent, brave the demon tunnels, spare or slay Rii, and descend into the Deep Nether for the final Possession.</p>
+      <p class="controls">Arrows/WASD move &middot; Space/Enter interact &middot; touch on mobile</p>
+      <a class="play" href="https://retroromrunner.github.io/cryn-dark-reflection/">PLAY NOW</a>
+      <p class="src"><a href="https://github.com/retroromrunner/cryn-dark-reflection">source code</a></p>
+    </section>
+  </main>
+
+  <footer>BUILT BY RETROROMRUNNER &mdash; SINGLE-FILE HTML GAMES</footer>
+</body>
+</html>
